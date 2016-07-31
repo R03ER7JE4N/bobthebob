@@ -130,6 +130,9 @@ a {
 .padtop40 {
   padding-top: 40px;
 }
+.padbot20 {
+  padding-bottom: 20px;
+}
 .playfair {
   font-family: 'Playfair Display';
 }

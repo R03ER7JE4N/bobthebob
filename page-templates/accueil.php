@@ -47,7 +47,7 @@ get_header(); ?>
 
       ?>
 
-        <div class="col-md-3 brik">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 brik padbot20">
           <a class="block" href="<?php the_permalink(); ?>">
 
             <?php if ( get_field('image_principale') ) { ?>
