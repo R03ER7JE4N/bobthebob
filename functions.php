@@ -67,7 +67,7 @@ function noSpaceDash($string) {
 /*<?php $phone = noSpaceDash(get_field('telephone')); ?>*/
 
 
-
+// Add class on excerpt
 function add_excerpt_class( $excerpt )
 {
     $excerpt = str_replace( "<p", "<p class=\"excerpt\"", $excerpt );
@@ -75,3 +75,9 @@ function add_excerpt_class( $excerpt )
 }
  
 add_filter( "the_excerpt", "add_excerpt_class" );
+
+// Excerpt max words
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
