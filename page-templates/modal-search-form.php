@@ -3,17 +3,16 @@
   
   <div class="modal-dialog" role="document">
 
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
     <div class="modal-content">
 
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
       <div class="modal-body">
         <form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get">
             <div>
-                <input type="text" id="s" name="s" value="" />
+                <input type="text" id="s" name="s" value="" placeholder="Rechercher..."/>
                 
                 <input type="submit" value="" id="searchsubmit" />
             </div>

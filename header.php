@@ -80,7 +80,7 @@
 			?>
 
 			<div class="search flex-center">
-				<a class="flex-center" href="javascript:void(0);" data-toggle="modal" data-target="#modalSearchForm">
+				<a class="flex-center" href="javascript:void(0);">
 					<img id="search_ico_white" src="<?php bloginfo('template_directory') ?>/img/ico-search.png" alt="">
 					<img id="search_ico_black" src="<?php bloginfo('template_directory') ?>/img/ico-search-black.png" alt="">
 				</a>
