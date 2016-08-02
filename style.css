@@ -225,10 +225,12 @@ nav .menu ul li.current_page_item a {
   width: 70px;
   height: 100%;
   border-left: 1px solid rgba(255,255,255,0.2);
+  background-color: blue;
+  z-index: 9;
 }
 .search a {
   width: 100px;
-  height: 100px;
+  height: inherit;
 }
 .search a img {
   width: 24px;
@@ -262,6 +264,17 @@ header.header_bg_white nav .menu ul li:hover a,
 header.header_bg_white nav .menu ul li.current_page_item a {
   opacity: 0.7;
 }
+header.header_bg_white nav .search a img#search_ico_white {
+  display: none;
+  transition: 0.5s;
+}
+header.header_bg_white nav .search a img#search_ico_black {
+  display: block;
+  transition: 0.5s;
+}
+header.header_bg_white nav .search a:hover img {
+  opacity: 0.7;
+}
 header.header_bg_white .logo a img#logo_white {
   display: none;
   transition: 0.5s;
@@ -270,16 +283,36 @@ header.header_bg_white .logo a img#logo_black {
   display: block;
   transition: 0.5s;
 }
-header.header_bg_white .search a img#search_ico_white {
-  display: none;
+form#searchform {
+  margin-right: -308px;
   transition: 0.5s;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1;
 }
-header.header_bg_white .search a img#search_ico_black {
-  display: block;
+form#searchform div {
+  height: inherit;
+}
+form#searchform div input {
+  height: inherit;
+  border: 0;
+  font-size: 1.2em;
+}
+form#searchform div input#s {
+  padding-left: 10px;
+  color: #222;
+  border-left: 1px solid #ccc;
+}
+form#searchform div input#searchsubmit {
+  padding: 0 12px;
+  color: #222;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.show-search-bar {
+  margin-right: 0 !important;
   transition: 0.5s;
-}
-header.header_bg_white .search a:hover img {
-  opacity: 0.7;
 }
 .slider_accueil .slide {
   width: 100%;

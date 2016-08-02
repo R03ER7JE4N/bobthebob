@@ -66,3 +66,8 @@ $(window).scroll(function(){
   }
 
 });
+
+// Bouton search trigger
+$('.btn_search_trigger').click(function(){
+  $('form#searchform').toggleClass('show-search-bar');
+});

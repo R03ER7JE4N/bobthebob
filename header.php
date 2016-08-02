@@ -79,20 +79,17 @@
 				( $defaults );
 			?>
 
-			<div class="search flex-center">
+			<?php include('searchform.php'); ?>
+
+			<div class="search flex-center btn_search_trigger">
 				<a class="flex-center" href="javascript:void(0);">
-					<img id="search_ico_white" src="<?php bloginfo('template_directory') ?>/img/ico-search.png" alt="">
-					<img id="search_ico_black" src="<?php bloginfo('template_directory') ?>/img/ico-search-black.png" alt="">
+					<img src="<?php bloginfo('template_directory') ?>/img/ico-search.png" alt="">
 				</a>
 	  		</div>
 
   		</nav>
 
-  		
-	  		
 	</header><!--/.navbar-->
-
-	<?php include ('page-templates/modal-search-form.php'); ?>
 
 
 
