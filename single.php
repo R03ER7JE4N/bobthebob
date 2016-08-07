@@ -2,30 +2,34 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<section id="post-<?php the_ID(); ?>" class="articles relative align-center parallax-window <?php post_class() ?>" data-position-y="<?php the_field('alignement'); ?>" data-parallax="scroll" data-image-src="<?php echo the_field('image_principale'); ?>">
+			<div class="overlay absolute"></div>
+			<div class="container">
 			
-			<h2><?php the_title(); ?></h2>
-			
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-
-			<div class="entry">
+				<h1 class="white uppercase"><?php the_title(); ?></h1>
 				
-				<?php the_content(); ?>
-
-				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-				
-				<?php the_tags( 'Tags: ', ', ', ''); ?>
+				<ul class="date-cat-author">
+					<li class="inline white uppercase">publié le <?php the_date(); ?></li>
+					<li class="inline white uppercase">dans la catégorie <?php the_category(); ?></li>
+					<li class="inline white uppercase">par <?php the_author(); ?></li>
+				</ul>
 
 			</div>
-			
-			<?php edit_post_link('Edit this entry','','.'); ?>
-			
-		</div>
+		</section>
 
-	<?php comments_template(); ?>
+		<section>
+			<div class="content-articles container padtop80 padbot80">
+				<div class="row">
+					<div class="col-md-8 offset-md-2">
+						<?php the_field('content'); ?>
+					</div>
+				</div>
+				
+			</div>
+		</section>
 
 	<?php endwhile; endif; ?>
 	
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
+

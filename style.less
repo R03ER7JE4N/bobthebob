@@ -43,6 +43,9 @@ body, html{
 a{
 	text-decoration: none !important;
 }
+li{
+	list-style: none;
+}
 .modal-backdrop {
    opacity: 0.8 !important;
 }
@@ -53,6 +56,9 @@ a{
 }
 .light{
 	color: #777;
+}
+.white{
+	color: #fff;
 }
 .bold{
 	font-weight: 600;
@@ -65,6 +71,15 @@ a{
 }
 .padtop40{
 	padding-top: 40px;
+}
+.padtop20{
+	padding-top: 20px;
+}
+.padbot80{
+	padding-bottom: 80px;
+}
+.padbot40{
+	padding-bottom: 40px;
 }
 .padbot20{
 	padding-bottom: 20px;
@@ -108,6 +123,9 @@ a{
 }
 .absolute{
 	position: absolute;
+}
+.uppercase{
+	text-transform: uppercase;
 }
 /* = = = = = = = = = = = = = = = = = = = = HEADER */
 header{
@@ -288,6 +306,7 @@ form#searchform{
     height: 100%;
 	background-color: #000;
 	opacity: 0.3;
+	z-index: -1;
 }
 .citation{
 	padding-top: 200px;
@@ -347,4 +366,47 @@ form#searchform{
 			transition: 0.3s;
 		}
 	}
+}
+/* = = = = = = = = = = = = = = = = = = = = ARTICLES */
+.parallax-window {
+    min-height: 700px;
+    background: transparent;
+}
+.articles{
+	h1{
+		padding-top: 300px;
+		font-size: 4em;
+		font-weight: 700;
+		line-height: 1em;
+	}
+	ul.date-cat-author{
+		li{
+			padding-right: 10px;
+			padding-left: 2px;
+			border-right: 2px solid #fff;
+			ul{
+				display: inline-block;
+				li{
+					border: none;
+					a{
+						color: #fff;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+		li:last-child{
+			border: none;
+		}
+	}
+}
+.content-articles{
+	p{
+		font-family: 'Droid Serif', serif;
+		font-size: 1.2em;
+	    line-height: 1.6em;
+	    padding-bottom: 30px;
+	    text-align: justify;
+	}
+	
 }

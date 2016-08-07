@@ -57,7 +57,7 @@ get_header(); ?>
             <div class="frame_content">
               <h2 class="bold"><?php the_title(); ?></h2>
               <p class="date bold"><?php the_date(); ?></p>
-              <?php the_excerpt(); ?>
+              <p><?php echo custom_field_excerpt(); ?></p>
               <p class="more">Lire la suite</p>
             </div>
             

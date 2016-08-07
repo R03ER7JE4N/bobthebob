@@ -21,7 +21,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Poppins:400,600' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/bootstrap.min.css" type="text/css" />
 
     <script src="<?php bloginfo('template_directory') ?>/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
@@ -29,8 +29,6 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/favicon.ico" type="image/vnd.microsoft.icon"/>
   	<link rel="icon" href="<?php bloginfo('template_directory') ?>/favicon.ico" type="image/x-ico"/>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
 	<!--[if lt IE 9]>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>

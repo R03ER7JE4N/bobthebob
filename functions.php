@@ -47,8 +47,8 @@
         ));
     }
 
-    // Correctif du datepicker de Contact Form 7
-    add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
+// Correctif du datepicker de Contact Form 7
+add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
 
 function hide_admin_bar_from_front_end(){
   if (is_blog_admin()) {
@@ -58,26 +58,17 @@ function hide_admin_bar_from_front_end(){
 }
 add_filter( 'show_admin_bar', 'hide_admin_bar_from_front_end' );
 
-//Remove space and dash
-function noSpaceDash($string) {
-    $string = preg_replace("/[\s-]+/", "", $string);
-    return $string;
+// Custom Excerpt function for Advanced Custom Fields
+function custom_field_excerpt() {
+    global $post;
+    $text = get_field('content');
+    if ( '' != $text ) {
+        $text = strip_shortcodes( $text );
+        $text = apply_filters('the_content', $text);
+        $text = str_replace(']]>', ']]>', $text);
+        $excerpt_length = 30;
+        $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+        $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+    }
+    return apply_filters('the_excerpt', $text);
 }
-//HTML
-/*<?php $phone = noSpaceDash(get_field('telephone')); ?>*/
-
-
-// Add class on excerpt
-function add_excerpt_class( $excerpt )
-{
-    $excerpt = str_replace( "<p", "<p class=\"excerpt\"", $excerpt );
-    return $excerpt;
-}
- 
-add_filter( "the_excerpt", "add_excerpt_class" );
-
-// Excerpt max words
-function custom_excerpt_length( $length ) {
-    return 20;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
